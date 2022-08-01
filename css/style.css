@@ -550,16 +550,21 @@ header .overlay .allHeader>a i:hover {
     position: relative;
 }
 
-.testimonialsSection .clint div,
-.testimonialsSection .clint p {
-    margin-bottom: 20px;
+.testimonialsSection .client {
+    width: 80%;
+    margin: auto;
 }
 
-.testimonialsSection .clint p {
+.testimonialsSection .client div,
+.testimonialsSection .client p {
+    margin-bottom: 40px;
+}
+
+.testimonialsSection .client p {
     font-style: italic;
 }
 
-.testimonialsSection .clint div {
+.testimonialsSection .client div {
     display: inline-block;
     width: 100px;
     height: 100px;
@@ -574,11 +579,19 @@ header .overlay .allHeader>a i:hover {
     position: relative;
 }
 
-.testimonialsSection .clint .clintP1 {
+.testimonialsSection .client .clientP1 {
     background-image: url("../imgs/Clints/1.jpg");
 }
 
-.testimonialsSection .clint div::after {
+.testimonialsSection .client .clientP2 {
+    background-image: url("../imgs/Clints/2.jpg");
+}
+
+.testimonialsSection .client .clientP3 {
+    background-image: url("../imgs/Clints/3.jpg");
+}
+
+.testimonialsSection .client div::after {
     position: absolute;
     content: "";
     top: 0;
@@ -599,7 +612,7 @@ header .overlay .allHeader>a i:hover {
     -o-transition: .3s;
 }
 
-.testimonialsSection .clint div:hover::after {
+.testimonialsSection .client div:hover::after {
     opacity: .25;
 }
 
@@ -611,8 +624,14 @@ header .overlay .allHeader>a i:hover {
 .testimonialsSection .leftArrow {
     position: absolute;
     top: 50%;
-    color: var(--whiteC);
+    color: var(--lightWC);
     font-size: 24px;
+    cursor: pointer;
+}
+
+.testimonialsSection .rightArrow:hover,
+.testimonialsSection .leftArrow:hover {
+    color: var(--mainC);
 }
 
 .testimonialsSection .rightArrow {
