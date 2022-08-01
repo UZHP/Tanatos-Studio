@@ -24,6 +24,35 @@ body {
     height: 5000px;
 }
 
+::selection {
+    color: var(--whiteC);
+    background-color: var(--mainC);
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background-color: var(--whiteC);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background-color: var(--mainC);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--lightWC);
+}
+
+::-webkit-scrollbar-corner {
+    background-color: var(--whiteC);
+}
+
 ::-webkit-input-placeholder {
     color: var(--lightWC);
 }
@@ -71,6 +100,11 @@ body {
     right: 0;
     width: 100%;
     height: 100%;
+}
+
+.overlayB {
+    padding: 80px 0;
+    background-color: rgba(0, 0, 0, 0.75);
 }
 
 .borderRadius {
@@ -128,6 +162,14 @@ header .overlay nav a {
 
 header .overlay nav a span {
     color: var(--mainC);
+}
+
+header .overlay nav a:hover {
+    color: var(--mainC);
+}
+
+header .overlay nav a:hover span {
+    color: var(--whiteC);
 }
 
 header .overlay nav .navMenu {
@@ -499,8 +541,86 @@ header .overlay .allHeader>a i:hover {
 /* ========== Start Testimonials ========== */
 
 .testimonialsSection {
-    color: #000;
+    color: var(--whiteC);
+    background-image: url("../imgs/ralph-ravi-kayden-0TgovzL3CBw-unsplash.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
     position: relative;
+}
+
+.testimonialsSection .clint div,
+.testimonialsSection .clint p {
+    margin-bottom: 20px;
+}
+
+.testimonialsSection .clint p {
+    font-style: italic;
+}
+
+.testimonialsSection .clint div {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    position: relative;
+}
+
+.testimonialsSection .clint .clintP1 {
+    background-image: url("../imgs/Clints/1.jpg");
+}
+
+.testimonialsSection .clint div::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: var(--whiteC);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    opacity: 0;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+
+.testimonialsSection .clint div:hover::after {
+    opacity: .25;
+}
+
+.testimonialsSection .container {
+    position: relative;
+}
+
+.testimonialsSection .rightArrow,
+.testimonialsSection .leftArrow {
+    position: absolute;
+    top: 50%;
+    color: var(--whiteC);
+    font-size: 24px;
+}
+
+.testimonialsSection .rightArrow {
+    right: 0;
+}
+
+.testimonialsSection .leftArrow {
+    left: 0;
 }
 
 /* ========== End Testimonials ========== */
