@@ -498,6 +498,9 @@ header .overlay .allHeader>a i:hover {
 
 /* ========== Start Testimonials ========== */
 
-
+.testimonialsSection {
+    color: #000;
+    position: relative;
+}
 
 /* ========== End Testimonials ========== */
