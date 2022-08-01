@@ -328,6 +328,7 @@ header .overlay .allHeader>a i:hover {
     width: 250px;
     color: var(--whiteC);
     background-color: var(--mainC);
+    cursor: pointer;
 }
 
 /* ========== End Subscribe ========== */
@@ -481,23 +482,6 @@ header .overlay .allHeader>a i:hover {
 
 /* ========== Start Testimonials ========== */
 
-.testimonialsSection {
-    background-image: url("../imgs/ralph-ravi-kayden-0TgovzL3CBw-unsplash.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    text-align: center;
-}
 
-.testimonialsSection .clint {
-    padding: 80px 0;
-    color: var(--whiteC);
-}
-
-.testimonialsSection .clint img {
-    width: 100px;
-    height: 100px;
-}
 
 /* ========== End Testimonials ========== */
