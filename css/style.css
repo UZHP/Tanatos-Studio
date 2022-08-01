@@ -1,0 +1,503 @@
+/* ========== Start Global ========== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --mainC: #F7600E;
+    --whiteC: #FFF;
+    --blackC: #000;
+    --lightWC: #CCC;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Open Sans";
+    text-transform: capitalize;
+    line-height: 1.6;
+    height: 5000px;
+}
+
+::-webkit-input-placeholder {
+    color: var(--lightWC);
+}
+
+::-moz-input-placeholder {
+    color: var(--lightWC);
+}
+
+::-ms-input-placeholder {
+    color: var(--lightWC);
+}
+
+::-o-input-placeholder {
+    color: var(--lightWC);
+}
+
+/* ========== End Global ========== */
+
+/* ========== Start FrameWork ========== */
+
+.container {
+    width: 70%;
+    margin: auto;
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+.transition {
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+
+.overlay {
+    color: var(--whiteC);
+    background-color: rgba(0, 0, 0, 0.75);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.borderRadius {
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+.disabled {
+    color: var(--whiteC) !important;
+    background-color: var(--mainC) !important;
+    border-color: var(--mainC) !important;
+    opacity: .5;
+    cursor: not-allowed !important;
+}
+
+/* ========== End Body ========== */
+
+/* ========== Start Header ========== */
+
+header {
+    background-image: url("../imgs/guillaume-issaly-IWKh3h22t68-unsplash.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    max-height: 620px;
+}
+
+header .overlay .allHeader {
+    display: flex;
+    flex-direction: column;
+}
+
+header .overlay nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    padding: 40px 0;
+}
+
+header .overlay nav span span {
+    color: var(--mainC);
+}
+
+header .overlay nav .navMenu {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+header .overlay nav .navMenu i {
+    margin-left: 5px;
+    font-size: 24px;
+}
+
+header .overlay .headerText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+header .overlay .headerText .headerMain {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 44px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+header .overlay .headerText .headerMain span {
+    color: var(--mainC);
+}
+
+header .overlay .headerText p {
+    margin-bottom: 40px;
+}
+
+header .overlay .headerText .headerButtons {
+    margin-bottom: 20px;
+}
+
+header .overlay .headerText .headerButtons a {
+    display: inline-block;
+    width: 200px;
+    color: inherit;
+    padding: 10px;
+    margin: 0 10px;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+header .overlay .headerText .headerButtons .headerWorkButton {
+    border: 1px solid var(--whiteC);
+}
+
+header .overlay .headerText .headerButtons .headerWorkButton:hover {
+    background-color: var(--mainC);
+    border-color: var(--mainC);
+}
+
+header .overlay .headerText .headerButtons .headerHireButton {
+    background-color: var(--mainC);
+    border: 1px solid var(--mainC);
+}
+
+header .overlay .headerText .headerButtons .headerHireButton:hover {
+    background-color: transparent;
+    border: 1px solid var(--whiteC);
+}
+
+header .overlay .allHeader>a {
+    display: flex;
+    align-self: center;
+    color: inherit;
+}
+
+header .overlay .allHeader>a i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--whiteC);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    animation-name: arrow;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes arrow {
+    to {
+        bottom: 40px;
+    }
+}
+
+header .overlay .allHeader>a i:hover {
+    background-color: var(--mainC);
+    border-color: var(--mainC);
+
+}
+
+/* ========== End Header ========== */
+
+/* ========== End Futures ========== */
+
+.futuresSection {
+    padding: 80px 0;
+}
+
+.futuresSection .futures {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    text-align: center;
+}
+
+.futuresSection .futures .future i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    color: var(--mainC);
+    margin: 10px auto;
+    margin-top: 0;
+    font-size: 56px;
+    width: 125px;
+    height: 125px;
+    border: 1px solid var(--lightWC);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.futuresSection .futures .future i:hover {
+    color: var(--whiteC);
+    background-color: var(--mainC);
+    border-color: var(--mainC);
+}
+
+.futuresSection .futures .future h3 {
+    color: var(--blackC);
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.futuresSection .futures .future p {
+    color: var(--blackC);
+    font-size: 12px;
+}
+
+/* ========== End Futures ========== */
+
+/* ========== Start Subscribe ========== */
+
+.subscribeSection {
+    padding: 80px 0;
+    background-image: url("../imgs/thisisengineering-raeng-sCgQPQZAeO4-unsplash.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.subscribeSection .allSubscribe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+
+.subscribeSection .allSubscribe input {
+    padding: 10px 20px;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    text-transform: inherit;
+}
+
+.subscribeSection .allSubscribe .emailSubscribe {
+    width: 500px;
+    color: var(--blackC);
+    background-color: var(--whiteC);
+    margin-right: 20px;
+}
+
+.subscribeSection .allSubscribe .submitSubscribe {
+    width: 250px;
+    color: var(--whiteC);
+    background-color: var(--mainC);
+}
+
+/* ========== End Subscribe ========== */
+
+/* ========== Start Our Team ========== */
+
+.ourTeamSection {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.ourTeamSection .ourTeamHeading {
+    margin-bottom: 40px;
+}
+
+.ourTeamSection .ourTeamHeading h2 {
+    margin-bottom: 10px;
+    font-size: 32px;
+}
+
+.ourTeamSection .ourTeamHeading h2 span {
+    color: var(--mainC);
+}
+
+.ourTeamSection .ourTeamWork {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.ourTeamSection .ourTeamWork .work {
+    width: 300px;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.ourTeamSection .ourTeamWork .work.workP1 {
+    background-image: url("../imgs//Our-Team/Out-Team-1.jpg");
+}
+
+.ourTeamSection .ourTeamWork .work.workP2 {
+    background-image: url("../imgs//Our-Team/Out-Team-2.jpg");
+}
+
+.ourTeamSection .ourTeamWork .work.workP3 {
+    background-image: url("../imgs//Our-Team/Out-Team-3.jpg");
+}
+
+.ourTeamSection .ourTeamWork .work.workP4 {
+    background-image: url("../imgs//Our-Team/Out-Team-4.jpg");
+}
+
+.ourTeamSection .ourTeamWork .work.workP5 {
+    background-image: url("../imgs//Our-Team/Out-Team-5.jpg");
+}
+
+.ourTeamSection .ourTeamWork .work.workP6 {
+    background-image: url("../imgs//Our-Team/Out-Team-6.jpg");
+}
+
+.ourTeamSection .ourTeamWork .work.workP7 {
+    background-image: url("../imgs//Our-Team/Out-Team-7.jpg");
+}
+
+.ourTeamSection .ourTeamWork .work.workP8 {
+    background-image: url("../imgs//Our-Team/Out-Team-8.jpg");
+}
+
+.ourTeamSection .ourTeamWork .work.workP9 {
+    background-image: url("../imgs//Our-Team/Out-Team-9.jpg");
+}
+
+.ourTeamSection .ourTeamWork .work.workP10 {
+    background-image: url("../imgs//Our-Team/Out-Team-10.jpg");
+}
+
+.ourTeamSection .ourTeamWork .work.workP11 {
+    background-image: url("../imgs//Our-Team/Out-Team-11.jpg");
+}
+
+.ourTeamSection .ourTeamWork .work.workP12 {
+    background-image: url("../imgs//Our-Team/Out-Team-12.jpg");
+}
+
+.ourTeamSection .ourTeamWork .work:hover .hoverOverlay {
+    top: 0;
+}
+
+.ourTeamSection .ourTeamWork .work .hoverOverlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: -300px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    color: var(--whiteC);
+    background-color: rgba(247, 96, 14, 0.75);
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+}
+
+.ourTeamSection .ourTeamWork .work .hoverOverlay h3 {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.ourTeamSection .ourTeamWork .work .hoverOverlay p {
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.ourTeamSection .ourTeamWork .work .hoverOverlay a {
+    display: inline-block;
+    color: inherit;
+    border: 1px solid var(--whiteC);
+    padding: 10px 40px;
+    text-decoration: none;
+}
+
+.ourTeamSection .ourTeamWork .work .hoverOverlay a:hover {
+    color: var(--mainC);
+    background-color: var(--whiteC);
+}
+
+.ourTeamSection .showMoreWork {
+    display: inline-block;
+    color: var(--blackC);
+    border: 1px solid var(--blackC);
+    padding: 10px 40px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.ourTeamSection .showMoreWork:hover {
+    color: var(--whiteC);
+    background-color: var(--mainC);
+    border-color: var(--mainC);
+}
+
+/* ========== End Our Team ========== */
+
+/* ========== Start Testimonials ========== */
+
+.testimonialsSection {
+    background-image: url("../imgs/ralph-ravi-kayden-0TgovzL3CBw-unsplash.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+}
+
+.testimonialsSection .clint {
+    padding: 80px 0;
+    color: var(--whiteC);
+}
+
+.testimonialsSection .clint img {
+    width: 100px;
+    height: 100px;
+}
+
+/* ========== End Testimonials ========== */
