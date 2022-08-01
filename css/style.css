@@ -121,7 +121,12 @@ header .overlay nav {
     padding: 40px 0;
 }
 
-header .overlay nav span span {
+header .overlay nav a {
+    color: inherit;
+    text-decoration: none;
+}
+
+header .overlay nav a span {
     color: var(--mainC);
 }
 
@@ -134,6 +139,10 @@ header .overlay nav .navMenu {
 header .overlay nav .navMenu i {
     margin-left: 5px;
     font-size: 24px;
+}
+
+header .overlay nav .navMenu:hover {
+    color: var(--mainC);
 }
 
 header .overlay .headerText {
@@ -321,6 +330,7 @@ header .overlay .allHeader>a i:hover {
     width: 500px;
     color: var(--blackC);
     background-color: var(--whiteC);
+    border: 1px solid var(--whiteC);
     margin-right: 20px;
 }
 
@@ -328,39 +338,45 @@ header .overlay .allHeader>a i:hover {
     width: 250px;
     color: var(--whiteC);
     background-color: var(--mainC);
+    border: 1px solid var(--mainC);
     cursor: pointer;
+}
+
+.subscribeSection .allSubscribe .submitSubscribe:hover {
+    background-color: transparent;
+    border-color: var(--whiteC);
 }
 
 /* ========== End Subscribe ========== */
 
 /* ========== Start Our Team ========== */
 
-.ourTeamSection {
+.ourWorkSection {
     padding: 80px 0;
     text-align: center;
 }
 
-.ourTeamSection .ourTeamHeading {
+.ourWorkSection .ourWorkHeading {
     margin-bottom: 40px;
 }
 
-.ourTeamSection .ourTeamHeading h2 {
+.ourWorkSection .ourWorkHeading h2 {
     margin-bottom: 10px;
     font-size: 32px;
 }
 
-.ourTeamSection .ourTeamHeading h2 span {
+.ourWorkSection .ourWorkHeading h2 span {
     color: var(--mainC);
 }
 
-.ourTeamSection .ourTeamWork {
+.ourWorkSection .ourWorks {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
     margin-bottom: 40px;
 }
 
-.ourTeamSection .ourTeamWork .work {
+.ourWorkSection .ourWorks .work {
     width: 300px;
     height: 300px;
     background-position: center;
@@ -370,59 +386,59 @@ header .overlay .allHeader>a i:hover {
     overflow: hidden;
 }
 
-.ourTeamSection .ourTeamWork .work.workP1 {
+.ourWorkSection .ourWorks .work.workP1 {
     background-image: url("../imgs//Our-Team/Out-Team-1.jpg");
 }
 
-.ourTeamSection .ourTeamWork .work.workP2 {
+.ourWorkSection .ourWorks .work.workP2 {
     background-image: url("../imgs//Our-Team/Out-Team-2.jpg");
 }
 
-.ourTeamSection .ourTeamWork .work.workP3 {
+.ourWorkSection .ourWorks .work.workP3 {
     background-image: url("../imgs//Our-Team/Out-Team-3.jpg");
 }
 
-.ourTeamSection .ourTeamWork .work.workP4 {
+.ourWorkSection .ourWorks .work.workP4 {
     background-image: url("../imgs//Our-Team/Out-Team-4.jpg");
 }
 
-.ourTeamSection .ourTeamWork .work.workP5 {
+.ourWorkSection .ourWorks .work.workP5 {
     background-image: url("../imgs//Our-Team/Out-Team-5.jpg");
 }
 
-.ourTeamSection .ourTeamWork .work.workP6 {
+.ourWorkSection .ourWorks .work.workP6 {
     background-image: url("../imgs//Our-Team/Out-Team-6.jpg");
 }
 
-.ourTeamSection .ourTeamWork .work.workP7 {
+.ourWorkSection .ourWorks .work.workP7 {
     background-image: url("../imgs//Our-Team/Out-Team-7.jpg");
 }
 
-.ourTeamSection .ourTeamWork .work.workP8 {
+.ourWorkSection .ourWorks .work.workP8 {
     background-image: url("../imgs//Our-Team/Out-Team-8.jpg");
 }
 
-.ourTeamSection .ourTeamWork .work.workP9 {
+.ourWorkSection .ourWorks .work.workP9 {
     background-image: url("../imgs//Our-Team/Out-Team-9.jpg");
 }
 
-.ourTeamSection .ourTeamWork .work.workP10 {
+.ourWorkSection .ourWorks .work.workP10 {
     background-image: url("../imgs//Our-Team/Out-Team-10.jpg");
 }
 
-.ourTeamSection .ourTeamWork .work.workP11 {
+.ourWorkSection .ourWorks .work.workP11 {
     background-image: url("../imgs//Our-Team/Out-Team-11.jpg");
 }
 
-.ourTeamSection .ourTeamWork .work.workP12 {
+.ourWorkSection .ourWorks .work.workP12 {
     background-image: url("../imgs//Our-Team/Out-Team-12.jpg");
 }
 
-.ourTeamSection .ourTeamWork .work:hover .hoverOverlay {
+.ourWorkSection .ourWorks .work:hover .hoverOverlay {
     top: 0;
 }
 
-.ourTeamSection .ourTeamWork .work .hoverOverlay {
+.ourWorkSection .ourWorks .work .hoverOverlay {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -439,18 +455,18 @@ header .overlay .allHeader>a i:hover {
     padding: 40px;
 }
 
-.ourTeamSection .ourTeamWork .work .hoverOverlay h3 {
+.ourWorkSection .ourWorks .work .hoverOverlay h3 {
     font-size: 22px;
     font-weight: 500;
     margin-bottom: 10px;
 }
 
-.ourTeamSection .ourTeamWork .work .hoverOverlay p {
+.ourWorkSection .ourWorks .work .hoverOverlay p {
     margin-bottom: 20px;
     font-size: 14px;
 }
 
-.ourTeamSection .ourTeamWork .work .hoverOverlay a {
+.ourWorkSection .ourWorks .work .hoverOverlay a {
     display: inline-block;
     color: inherit;
     border: 1px solid var(--whiteC);
@@ -458,12 +474,12 @@ header .overlay .allHeader>a i:hover {
     text-decoration: none;
 }
 
-.ourTeamSection .ourTeamWork .work .hoverOverlay a:hover {
+.ourWorkSection .ourWorks .work .hoverOverlay a:hover {
     color: var(--mainC);
     background-color: var(--whiteC);
 }
 
-.ourTeamSection .showMoreWork {
+.ourWorkSection .showMoreWork {
     display: inline-block;
     color: var(--blackC);
     border: 1px solid var(--blackC);
@@ -472,7 +488,7 @@ header .overlay .allHeader>a i:hover {
     cursor: pointer;
 }
 
-.ourTeamSection .showMoreWork:hover {
+.ourWorkSection .showMoreWork:hover {
     color: var(--whiteC);
     background-color: var(--mainC);
     border-color: var(--mainC);
