@@ -11,6 +11,8 @@
     --whiteC: #FFF;
     --blackC: #000;
     --lightWC: #9DA1A5;
+    /* --tranWC: rgba(255, 255, 255, 0.25); */
+    --tranWC: transparent;
 }
 
 html {
@@ -18,10 +20,9 @@ html {
 }
 
 body {
-    font-family: "Open Sans";
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-transform: capitalize;
     line-height: 1.6;
-    height: 5000px;
 }
 
 ::selection {
@@ -132,7 +133,7 @@ body {
 /* ========== Start Header ========== */
 
 header {
-    background-image: url("../imgs/guillaume-issaly-IWKh3h22t68-unsplash.jpg");
+    background-image: url("../imgs/Header.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -158,6 +159,7 @@ header .overlay nav {
 header .overlay nav a {
     color: inherit;
     text-decoration: none;
+    font-size: 20px;
 }
 
 header .overlay nav a span {
@@ -176,6 +178,7 @@ header .overlay nav .navMenu {
     display: flex;
     align-items: center;
     cursor: pointer;
+    font-size: 20px;
 }
 
 header .overlay nav .navMenu i {
@@ -229,12 +232,13 @@ header .overlay .headerText .headerButtons a {
 }
 
 header .overlay .headerText .headerButtons .headerWorkButton {
-    border: 1px solid var(--whiteC);
+    border: 1px solid var(--lightWC);
+    background-color: var(--tranWC);
 }
 
 header .overlay .headerText .headerButtons .headerWorkButton:hover {
     background-color: var(--mainC);
-    border-color: var(--mainC);
+    border: 1px solid var(--mainC);
 }
 
 header .overlay .headerText .headerButtons .headerHireButton {
@@ -243,8 +247,8 @@ header .overlay .headerText .headerButtons .headerHireButton {
 }
 
 header .overlay .headerText .headerButtons .headerHireButton:hover {
-    background-color: transparent;
-    border: 1px solid var(--whiteC);
+    background-color: var(--tranWC);
+    border: 1px solid var(--lightWC);
 }
 
 header .overlay .allHeader>a {
@@ -259,7 +263,8 @@ header .overlay .allHeader>a i {
     align-items: center;
     width: 40px;
     height: 40px;
-    border: 1px solid var(--whiteC);
+    border: 1px solid var(--lightWC);
+    background-color: var(--tranWC);
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -345,7 +350,7 @@ header .overlay .allHeader>a i:hover {
 
 .subscribeSection {
     padding: 80px 0;
-    background-image: url("../imgs/thisisengineering-raeng-sCgQPQZAeO4-unsplash.jpg");
+    background-image: url("../imgs/Subscripe.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -361,18 +366,19 @@ header .overlay .allHeader>a i:hover {
 }
 
 .subscribeSection .allSubscribe input {
-    padding: 10px 20px;
+    padding: 12.5px;
     border: 0;
     outline: 0;
     background-color: transparent;
     text-transform: inherit;
+    caret-color: var(--mainC);
 }
 
 .subscribeSection .allSubscribe .emailSubscribe {
     width: 500px;
     color: var(--blackC);
-    background-color: var(--whiteC);
-    border: 1px solid var(--whiteC);
+    background-color: var(--tranWC);
+    border: 1px solid var(--lightWC);
     margin-right: 20px;
 }
 
@@ -385,8 +391,8 @@ header .overlay .allHeader>a i:hover {
 }
 
 .subscribeSection .allSubscribe .submitSubscribe:hover {
-    background-color: transparent;
-    border-color: var(--whiteC);
+    background-color: var(--tranWC);
+    border-color: var(--lightWC);
 }
 
 /* ========== End Subscribe ========== */
@@ -542,7 +548,7 @@ header .overlay .allHeader>a i:hover {
 
 .testimonialsSection {
     color: var(--whiteC);
-    background-image: url("../imgs/ralph-ravi-kayden-0TgovzL3CBw-unsplash.jpg");
+    background-image: url("../imgs/Testimonials.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -588,7 +594,7 @@ header .overlay .allHeader>a i:hover {
 }
 
 .testimonialsSection .client .clientP3 {
-    background-image: url("../imgs/Clints/3.jpg");
+    background-image: url("../imgs/Clints/3.jpeg");
 }
 
 .testimonialsSection .client div::after {
@@ -683,60 +689,10 @@ header .overlay .allHeader>a i:hover {
     -webkit-filter: grayscale(0);
 }
 
-.ourTeamSection .teams .team:hover .teamPhoto {
-    transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -o-transform: scale(1.1);
-}
-
 .ourTeamSection .teams .team .teamPhoto,
 .ourTeamSection .teams .team h2,
 .ourTeamSection .teams .team .teamSocialIcons {
     margin-bottom: 10px;
-}
-
-.ourTeamSection .teams .team .teamSocialIcons a {
-    color: var(--whiteC);
-    background-color: var(--lightWC);
-    height: 40px;
-    width: 40px;
-    text-align: center;
-    line-height: 30px;
-    text-decoration: none;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-}
-
-.ourTeamSection .teams .team .teamSocialIcons .facebookTeamIcon {
-    background-color: #3B5998;
-}
-
-.ourTeamSection .teams .team .teamSocialIcons .twitterTeamIcon {
-    background-color: #55ACEE;
-}
-
-.ourTeamSection .teams .team .teamSocialIcons .googlePlusTeamIcon {
-    background-color: #DC4E41;
-}
-
-.ourTeamSection .teams .team h2 {
-    color: var(--lightWC);
-    font-weight: 500;
-}
-
-.ourTeamSection .teams .team p {
-    color: var(--lightWC);
-    font-size: 14px;
-}
-
-.ourTeamSection .teams .team:hover h2,
-.ourTeamSection .teams .team:hover p {
-    color: var(--blackC);
 }
 
 .ourTeamSection .teams .team .teamPhoto {
@@ -750,13 +706,22 @@ header .overlay .allHeader>a i:hover {
     transform-origin: bottom;
 }
 
+.ourTeamSection .teams .team:hover .teamPhoto {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
 .ourTeamSection .teams .team .teamPhoto::after {
     position: absolute;
     content: "";
     bottom: 0;
-    left: 50%;
-    width: 0;
-    height: 5px;
+    /* left: 50%; */
+    left: 0;
+    width: 100%;
+    height: 0;
     background-color: var(--mainC);
     transition: .3s;
     -webkit-transition: .3s;
@@ -766,8 +731,9 @@ header .overlay .allHeader>a i:hover {
 }
 
 .ourTeamSection .teams .team:hover .teamPhoto::after {
-    left: 0;
-    width: 100%;
+    /* left: 0; */
+    /* width: 100%; */
+    height: 5px;
 }
 
 .teamP1 {
@@ -786,4 +752,210 @@ header .overlay .allHeader>a i:hover {
     background-image: url("../imgs/Team/Team-4.jpg");
 }
 
+.ourTeamSection .teams .team h2 {
+    color: var(--lightWC);
+    font-weight: 500;
+}
+
+.ourTeamSection .teams .team .teamSocialIcons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--whiteC);
+    background-color: var(--lightWC);
+    height: 30px;
+    width: 30px;
+    text-decoration: none;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.ourTeamSection .teams .team .teamSocialIcons .facebookTeamIcon {
+    background-color: #3B5998;
+    border: 1px solid #3B5998;
+}
+
+.ourTeamSection .teams .team .teamSocialIcons .facebookTeamIcon:hover {
+    color: #3B5998;
+    background-color: var(--tranWC);
+}
+
+.ourTeamSection .teams .team .teamSocialIcons .twitterTeamIcon {
+    background-color: #55ACEE;
+    border: 1px solid #55ACEE;
+}
+
+.ourTeamSection .teams .team .teamSocialIcons .twitterTeamIcon:hover {
+    color: #55ACEE;
+    background-color: var(--tranWC);
+}
+
+.ourTeamSection .teams .team .teamSocialIcons .googlePlusTeamIcon {
+    background-color: #DC4E41;
+    border: 1px solid #DC4E41;
+}
+
+.ourTeamSection .teams .team .teamSocialIcons .googlePlusTeamIcon:hover {
+    color: #DC4E41;
+    background-color: var(--tranWC);
+}
+
+.ourTeamSection .teams .team p {
+    color: var(--lightWC);
+    font-size: 14px;
+}
+
+.ourTeamSection .teams .team:hover h2,
+.ourTeamSection .teams .team:hover p {
+    color: var(--blackC);
+}
+
 /* ========== End Our Team ========== */
+
+/* ========== Start Contact ========== */
+
+.contactSection {
+    color: var(--whiteC);
+    position: relative;
+    background-image: url("../imgs/Contact-1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.contactSection .cOverlay {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.contactSection .allContact {
+    padding: 80px 0;
+}
+
+.contactSection .allContact .contactHeading {
+    margin-bottom: 40px;
+}
+
+.contactSection .allContact .contactHeading h2 {
+    margin-bottom: 10px;
+    font-size: 32px;
+}
+
+.contactSection .allContact .contactHeading h2 span {
+    color: var(--mainC);
+}
+
+.contactSection .allContact form {
+    width: 80%;
+    margin: auto;
+}
+
+.contactSection .allContact form input,
+.contactSection .allContact form textarea {
+    text-transform: inherit;
+    font-family: inherit;
+    padding: 12.5px;
+    border: 1px solid var(--lightWC);
+    outline: 0;
+    background-color: var(--tranWC);
+    caret-color: var(--mainC);
+}
+
+.contactSection .allContact form .upInputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.contactSection .allContact form>textarea {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 200px;
+    margin-bottom: 20px;
+}
+
+.contactSection .allContact form .contactSubmit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contactSection .allContact form .contactSubmit input {
+    width: 25%;
+    color: var(--whiteC);
+    border: 1px solid var(--mainC);
+    background-color: var(--mainC);
+    cursor: pointer;
+}
+
+.contactSection .allContact form .contactSubmit input:hover {
+    border-color: var(--lightWC);
+    background-color: var(--tranWC);
+}
+
+.contactSection .allContact form .contactSubmit a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: inherit;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.contactSection .allContact form .contactSubmit .facebookContactIcon {
+    background-color: #3B5998;
+    border: 1px solid #3B5998;
+}
+
+.contactSection .allContact form .contactSubmit .facebookContactIcon:hover {
+    color: #3B5998;
+    background-color: var(--tranWC);
+}
+
+.contactSection .allContact form .contactSubmit .twitterContactIcon {
+    background-color: #55ACEE;
+    border: 1px solid #55ACEE;
+}
+
+.contactSection .allContact form .contactSubmit .twitterContactIcon:hover {
+    color: #55ACEE;
+    background-color: var(--tranWC);
+}
+
+.contactSection .allContact form .contactSubmit .googlePlusContactIcon {
+    background-color: #DC4E41;
+    border: 1px solid #DC4E41;
+}
+
+.contactSection .allContact form .contactSubmit .googlePlusContactIcon:hover {
+    color: #DC4E41;
+    background-color: var(--tranWC);
+}
+
+/* ========== End Contact ========== */
+
+/* ========== Start Footer ========== */
+
+.footerSection {
+    color: var(--whiteC);
+    background-color: #3B434C;
+    padding: 20px 0;
+}
+
+.footerSection .allFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ========== End Footer ========== */
