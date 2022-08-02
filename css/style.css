@@ -133,7 +133,7 @@ body {
 /* ========== Start Header ========== */
 
 header {
-    background-image: url("../imgs/Header.jpg");
+    background-image: url("https://i.postimg.cc/4N05QxnK/Header.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -360,7 +360,7 @@ header .overlay .allHeader>a i:hover {
 
 .subscribeSection {
     padding: 80px 0;
-    background-image: url("../imgs/Subscripe.jpg");
+    background-image: url("https://i.postimg.cc/DzkPRprn/Subscripe.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -558,7 +558,7 @@ header .overlay .allHeader>a i:hover {
 
 .testimonialsSection {
     color: var(--whiteC);
-    background-image: url("../imgs/Testimonials.jpg");
+    background-image: url("https://i.postimg.cc/7ZCKFTjM/Testimonials.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -747,19 +747,19 @@ header .overlay .allHeader>a i:hover {
 }
 
 .teamP1 {
-    background-image: url("../imgs/Team/Team-1.jpg");
+    background-image: url("https://i.postimg.cc/rsDrZmPq/Team-1.jpg");
 }
 
 .teamP2 {
-    background-image: url("../imgs/Team/Team-2.jpg");
+    background-image: url("https://i.postimg.cc/FR4vnnCz/Team-2.jpg");
 }
 
 .teamP3 {
-    background-image: url("../imgs/Team/Team-3.jpg");
+    background-image: url("https://i.postimg.cc/RF7SSzJw/Team-3.jpg");
 }
 
 .teamP4 {
-    background-image: url("../imgs/Team/Team-4.jpg");
+    background-image: url("https://i.postimg.cc/bYRy4phh/Team-4.jpg");
 }
 
 .ourTeamSection .teams .team h2 {
@@ -830,7 +830,8 @@ header .overlay .allHeader>a i:hover {
 .contactSection {
     color: var(--whiteC);
     position: relative;
-    background-image: url("../imgs/Contact-1.jpg");
+    background-image: url("https://i.postimg.cc/y8STQCSL/Contact-1.jpg");
+    /* background-image: url("https://i.postimg.cc/tR2D75jN/Contact-2.jpg"); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -856,11 +857,6 @@ header .overlay .allHeader>a i:hover {
 
 .contactSection .allContact .contactHeading h2 span {
     color: var(--mainC);
-}
-
-.contactSection .allContact form {
-    width: 80%;
-    margin: auto;
 }
 
 .contactSection .allContact form input,
@@ -915,11 +911,13 @@ header .overlay .allHeader>a i:hover {
     text-decoration: none;
     width: 40px;
     height: 40px;
+    font-size: 20px;
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+    margin: 0 5px;
 }
 
 .contactSection .allContact form .contactSubmit .contactSocialIcons {
