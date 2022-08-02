@@ -140,7 +140,7 @@ header {
     position: relative;
     text-align: center;
     width: 100%;
-    max-height: 620px;
+    min-height: 620px;
 }
 
 header .overlay .allHeader {
