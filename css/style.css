@@ -218,6 +218,10 @@ header .overlay .headerText p {
 }
 
 header .overlay .headerText .headerButtons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    gap: 20px;
     margin-bottom: 20px;
 }
 
@@ -226,7 +230,6 @@ header .overlay .headerText .headerButtons a {
     width: 200px;
     color: inherit;
     padding: 10px;
-    margin: 0 10px;
     font-size: 14px;
     text-decoration: none;
 }
@@ -265,19 +268,26 @@ header .overlay .allHeader>a i {
     height: 40px;
     border: 1px solid var(--lightWC);
     background-color: var(--tranWC);
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    cursor: pointer;
     position: absolute;
     bottom: 20px;
+    left: 50%;
+    cursor: pointer;
+    text-decoration: none;
     animation-name: arrow;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 
 @keyframes arrow {
@@ -358,10 +368,11 @@ header .overlay .allHeader>a i:hover {
 }
 
 .subscribeSection .allSubscribe {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
     align-items: center;
-    text-align: center;
+    align-content: center;
+    gap: 20px;
     height: 100%;
 }
 
@@ -375,15 +386,12 @@ header .overlay .allHeader>a i:hover {
 }
 
 .subscribeSection .allSubscribe .emailSubscribe {
-    width: 500px;
     color: var(--blackC);
     background-color: var(--tranWC);
     border: 1px solid var(--lightWC);
-    margin-right: 20px;
 }
 
 .subscribeSection .allSubscribe .submitSubscribe {
-    width: 250px;
     color: var(--whiteC);
     background-color: var(--mainC);
     border: 1px solid var(--mainC);
@@ -420,6 +428,7 @@ header .overlay .allHeader>a i:hover {
 .ourWorkSection .ourWorks {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
     gap: 20px;
     margin-bottom: 40px;
 }
@@ -518,6 +527,7 @@ header .overlay .allHeader>a i:hover {
     display: inline-block;
     color: inherit;
     border: 1px solid var(--whiteC);
+    background-color: var(--tranWC);
     padding: 10px 40px;
     text-decoration: none;
 }
@@ -912,6 +922,10 @@ header .overlay .allHeader>a i:hover {
     -o-border-radius: 50%;
 }
 
+.contactSection .allContact form .contactSubmit .contactSocialIcons {
+    display: flex;
+}
+
 .contactSection .allContact form .contactSubmit .facebookContactIcon {
     background-color: #3B5998;
     border: 1px solid #3B5998;
@@ -959,3 +973,83 @@ header .overlay .allHeader>a i:hover {
 }
 
 /* ========== End Footer ========== */
+
+/* ========== Start Media ========== */
+
+@media (max-width:1350px) {
+    .ourWorkSection .ourWorks {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width:1050px) {
+    .futuresSection .futures {
+        grid-template-columns: 1fr 1fr;
+    }
+    .ourTeamSection .teams {
+        grid-template-columns: 1fr 1fr;
+    }
+    .ourWorkSection .ourWorks {
+        grid-template-columns: 1fr;
+    }
+    .contactSection .allContact form .upInputs {
+        grid-template-columns: 1fr;
+    }
+    .contactSection .allContact form .contactSubmit {
+        flex-direction: column;
+    }
+    .contactSection .allContact form .contactSubmit input {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .contactSection .allContact form .contactSubmit .contactSocialIcons {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .footerSection .allFooter {
+        flex-direction: column;
+    }
+    .footerSection .allFooter p:nth-child(1) {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 900px) {
+    header .overlay nav a {
+        font-size: 16px;
+    }
+
+    header .overlay nav .navMenu {
+        font-size: 16px;
+    }
+
+    header .overlay nav .navMenu i {
+        font-size: 20px;
+    }
+
+    header .overlay .headerText .headerButtons {
+        grid-template-columns: 1fr;
+    }
+
+    header .overlay .headerText .headerMain {
+        font-size: 32px;
+    }
+
+    header .overlay .headerText p {
+        font-size: 12px;
+    }
+    .futuresSection .futures {
+        grid-template-columns: 1fr;
+    }
+    .subscribeSection .allSubscribe {
+        grid-template-columns: 1fr;
+    }
+    .ourWorkSection .ourWork {
+        grid-template-columns: 1fr;
+    }
+    .ourTeamSection .teams {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ========== End Media ========== */
