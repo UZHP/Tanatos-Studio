@@ -1,12 +1,12 @@
 $(function () {
 
-    $(window).resize(function () {
+    // $(window).resize(function () {
 
-        $('header').height($(window).height())
+    //     $('header').height($(window).height())
 
-    });
+    // });
 
-    $('header').height($(window).height())
+    // $('header').height($(window).height())
 
     $('.showMoreWork').click(function () {
         $('.hidden').fadeIn(2000);
